@@ -35,16 +35,20 @@
             </tr>
           </thead>
           <tbody>
-            <% for (var i = 0; i < tasks.legth; i++) { %>
+            <% for (var i = 0; i < tasks.length; i++) { %>
             <tr>
               <td><%= i + 1 %></td>
                 <td>
                   <strong>
-                    <%= tasks[i].title %>
+                    <%= tasks[i].title%>
                   </strong>
                 </td>
                 <td>
-                  <%= tasks[i].description %>
+                  <%= tasks[i].description%>
+                </td>
+                <td>
+                  <a href="#">Done</a>
+                  <a href="#">Delete</a>
                 </td>
               </tr>
             <% }%>

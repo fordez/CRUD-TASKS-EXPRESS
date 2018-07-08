@@ -15,5 +15,9 @@ router.get('/',(req,res)=>{
 router.post('/add',(req,res)=>{
   let body = req.body;
 console.log(body);
+model.create(body,(err,task)=>{
+  if(err) throw err;
+  res.redirect('/');
+});
 });
 module.exports = router;
